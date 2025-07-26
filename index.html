@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white shadow-md p-6 rounded-md w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">Currency Converter</h1>
+
+    <input id="amount" type="number" placeholder="Amount"
+      class="w-full p-2 border rounded mb-4" />
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 mb-2">From Currency:</label>
+      <select id="from" class="w-full p-2 border rounded">
+        <option value="USD">USD</option>
+        <option value="AUD">AUD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 mb-2">Convert to:</label>
+      <div class="grid grid-cols-2 gap-2 max-h-60 overflow-y-auto border rounded p-4">
+        <label class="flex items-center">
+          <input type="checkbox" value="USD" class="mr-2" checked>
+          <span>USD</span>
+        </label>
+        <label class="flex items-center">
+          <input type="checkbox" value="AUD" class="mr-2" checked>
+          <span>AUD</span>
+        </label>
+        <label class="flex items-center">
+          <input type="checkbox" value="EUR" class="mr-2" checked>
+          <span>EUR</span>
+        </label>
+        <label class="flex items-center">
+          <input type="checkbox" value="GBP" class="mr-2">
+          <span>GBP</span>
+        </label>
+        <label class="flex items-center">
+          <input type="checkbox" value="JPY" class="mr-2">
+          <span>JPY</span>
+        </label>
+      </div>
+    </div>
+
+    <button id="convert" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
+      Convert
+    </button>
+
+    <p id="result" class="text-center text-lg mt-4 font-medium"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
